@@ -24,6 +24,14 @@ module.exports = {
       "type": "string",
       "message": "Author"
     },
+    "mobile": {
+      "type": "confirm",
+      "message": "Is it a mobile project?"
+    },
+    "fontAwesome": {
+      "type": "confirm",
+      "message": "do you want font-awesome?"
+    },
     "build": {
       "type": "list",
       "message": "Vue build",
@@ -43,6 +51,10 @@ module.exports = {
     "router": {
       "type": "confirm",
       "message": "Install vue-router?"
+    },
+    "store": {
+      "type": "confirm",
+      "message": "Install vuex?"
     },
     "lint": {
       "type": "confirm",
@@ -86,7 +98,8 @@ module.exports = {
     "test/unit/**/*": "unit",
     "build/webpack.test.conf.js": "unit",
     "test/e2e/**/*": "e2e",
-    "src/router/**/*": "router"
+    "src/router/**/*": "router",
+    "src/store/**/*": "store"
   },
   "completeMessage": "To get started:\n\n  {{^inPlace}}cd {{destDirName}}\n  {{/inPlace}}npm install\n  npm run dev\n\nDocumentation can be found at https://vuejs-templates.github.io/webpack"
 };
