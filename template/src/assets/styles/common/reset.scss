@@ -3,6 +3,16 @@ body {
     font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif;
 }
 
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
 body {
     -webkit-overflow-scrolling: touch;
 }

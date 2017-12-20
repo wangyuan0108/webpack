@@ -2,6 +2,9 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 {{/if_eq}}
+{{#locale}}
+import '~locale';
+{{/locale}}
 import '~styles';
 import Vue from 'vue';
 import api from '~api';
@@ -26,18 +29,18 @@ FastClick.attach(document.body);
 
 /* eslint-disable no-new */
 new Vue({
-    el: '#app',
-    {{#store}}
-    store,
-    {{/store}}
-    {{#router}}
-    router,
-    {{/router}}
-    {{#if_eq build "runtime"}}
-    render: h => h(App){{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-    {{/if_eq}}
-    {{#if_eq build "standalone"}}
-    template: '<App/>',
-    components: { App }
-    {{/if_eq}}
+  el: '#app',
+  {{#store}}
+  store,
+  {{/store}}
+  {{#router}}
+  router,
+  {{/router}}
+  {{#if_eq build "runtime"}}
+  render: h => h(App)
+  {{/if_eq}}
+  {{#if_eq build "standalone"}}
+  template: '<App/>',
+  components: { App }
+  {{/if_eq}}
 });

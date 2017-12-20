@@ -5,23 +5,23 @@
     <meta charset="utf-8">
     <title>{{ name }}</title>
     <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet">
-    {{#fontAwesome}}
-    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    {{/fontAwesome}}
     {{#mobile}}
     <script src="http://asset.dmcdn.com/public/tbcdn-flexible/0.3.2/flexible.js"></script>
     {{/mobile}}
-    <script src="http://cdn.bootcss.com/vue/2.2.5/vue.min.js"></script>
-    <script src="http://cdn.bootcss.com/axios/0.15.3/axios.min.js"></script>
+    <script src="http://cdn.bootcss.com/vue/2.5.9/vue.min.js"></script>
+    <script src="http://cdn.bootcss.com/axios/0.17.1/axios.min.js"></script>
     {{#router}}
-    <script src="http://cdn.bootcss.com/vue-router/2.3.0/vue-router.min.js"></script>
+    <script src="http://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
     {{/router}}
     {{#store}}
-    <script src="https://cdn.bootcss.com/vuex/2.3.0/vuex.min.js"></script>
+    <script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.min.js"></script>
     {{/store}}
     {{#mobile}}
     <script src="https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"></script>
     {{/mobile}}
+    {{#locale}}
+    <script src="https://cdn.bootcss.com/vue-i18n/5.0.3/vue-i18n.min.js"></script>
+    {{/locale}}
 </head>
 
 <body>
