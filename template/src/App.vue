@@ -1,5 +1,5 @@
 <template>
-    <div class="app">
+    <div class="app"{{#locale}} :class="{ 'en-wrapper': $lang === 'en'}"{{/locale}}>
         {{#router}}
         <router-view></router-view>
         {{/router}}
@@ -7,7 +7,20 @@
 </template>
 
 <script>
-export default {};
+{{#locale}}
+import Vue from 'vue';
+{{/locale}}
+export default {
+    {{#locale}}
+    created() {
+        if (window.language === 'en') {
+            Vue.config.lang = 'en';
+        } else {
+            Vue.config.lang = 'zh';
+        }
+    }
+    {{/locale}}
+};
 </script>
 
 <style>

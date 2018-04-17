@@ -29,18 +29,18 @@ FastClick.attach(document.body);
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  {{#store}}
-  store,
-  {{/store}}
-  {{#router}}
-  router,
-  {{/router}}
-  {{#if_eq build "runtime"}}
-  render: h => h(App)
-  {{/if_eq}}
-  {{#if_eq build "standalone"}}
-  components: { App },
-  template: '<App/>'
-  {{/if_eq}}
+    el: '#app',
+    {{#store}}
+    store,
+    {{/store}}
+    {{#router}}
+    router,
+    {{/router}}
+    {{#if_eq build "runtime"}}
+    render: h => h(App)
+    {{/if_eq}}
+    {{#if_eq build "standalone"}}
+    template: '<App/>',
+    components: { App }
+    {{/if_eq}}
 });

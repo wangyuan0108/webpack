@@ -64,3 +64,12 @@ You can fork this repo to create your own boilerplate, and use it with `vue-cli`
 ``` bash
 vue init username/repo my-project
 ```
+
+### 同步远程仓库
+
+``` bash
+$ git remote add upstream https://github.com/vuejs-templates/webpack.git
+$ git fetch upstream master
+$ git checkout master
+$ git merge upstream/master
+```
